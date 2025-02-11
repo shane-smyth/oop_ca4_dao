@@ -1,24 +1,26 @@
 package BudgetMangerDAO.DTOs;
 
+import java.sql.Date;
+
 public class Expense {
     private int expenseID;
     private String title;
     private double amount;
-    private String dataIncurred;
+    private Date dateIncurred;
 
 
-    public Expense(int expenseID, String title, double amount, String dataIncurred) {
+    public Expense(int expenseID, String title, double amount, Date dateIncurred) {
         this.expenseID = expenseID;
         this.title = title;
         this.amount = amount;
-        this.dataIncurred = dataIncurred;
+        this.dateIncurred = dateIncurred;
     }
 
-    public Expense(String title, double amount, String dataIncurred) {
+    public Expense(String title, double amount, Date dateIncurred) {
         this.expenseID = 0;
         this.title = title;
         this.amount = amount;
-        this.dataIncurred = dataIncurred;
+        this.dateIncurred = dateIncurred;
     }
 
     public Expense() {
@@ -48,21 +50,21 @@ public class Expense {
         this.amount = amount;
     }
 
-    public String getDataIncurred() {
-        return dataIncurred;
+    public Date getDateIncurred() {
+        return dateIncurred;
     }
 
-    public void setDataIncurred(String dataIncurred) {
-        this.dataIncurred = dataIncurred;
+    public void setDateIncurred(Date dateIncurred) {
+        this.dateIncurred = dateIncurred;
     }
 
     @Override
     public String toString() {
-        return "Expense{" +
-                "expenseID=" + expenseID +
-                ", title='" + title + '\'' +
-                ", amount=" + amount +
-                ", dataIncurred='" + dataIncurred + '\'' +
+        return "{" +
+                "expenseID = " + expenseID +
+                ", title = '" + title + '\'' +
+                ", amount = " + amount +
+                ", dataIncurred = '" + dateIncurred + '\'' +
                 '}';
     }
 }

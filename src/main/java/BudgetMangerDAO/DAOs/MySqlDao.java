@@ -8,7 +8,7 @@ import BudgetMangerDAO.Exceptions.DaoException;
 public class MySqlDao {
     public Connection getConnection() throws DaoException {
         String driver = "com.mysql.cj.jdbc.Driver";
-        String url = "jdbc:mysql://localhost:3306/jdbc_taskmanager";
+        String url = "jdbc:mysql://localhost:3306/jdbc_budget_manager_ca4";
         String username = "root";
         String password = "";
         Connection connection = null;

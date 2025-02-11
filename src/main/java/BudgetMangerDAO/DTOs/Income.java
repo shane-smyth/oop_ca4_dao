@@ -1,6 +1,6 @@
 package BudgetMangerDAO.DTOs;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Income {
     private int incomeID;
@@ -59,11 +59,11 @@ public class Income {
 
     @Override
     public String toString() {
-        return "Income{" +
-                "incomeID=" + incomeID +
-                ", title='" + title + '\'' +
-                ", amount=" + amount +
-                ", dateEarned=" + dateEarned +
+        return "{" +
+                "incomeID = " + incomeID +
+                ", title = '" + title + '\'' +
+                ", amount = " + amount +
+                ", dateEarned = " + dateEarned +
                 '}';
     }
 }
