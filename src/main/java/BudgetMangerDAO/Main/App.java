@@ -63,6 +63,7 @@ public class App {
                         int expenseId = keyboard.nextInt();
                         keyboard.nextLine();
                         IExpenseDao.deleteExpense(expenseId);
+                        System.out.println();
                         break;
                     case 4:
                         List<Income> incomes = IIncomeDao.getAllIncomes();
@@ -92,6 +93,7 @@ public class App {
                         int incomeId = keyboard.nextInt();
                         keyboard.nextLine();
                         IIncomeDao.deleteIncome(incomeId);
+                        System.out.println();
                         break;
                     case 7:
                         System.out.println("Enter Month (1-12): ");
@@ -118,13 +120,15 @@ public class App {
         List<Expense> expenses = IExpenseDao.getExpenseByMonth(month, year);
         List<Income> incomes = IIncomeDao.getIncomeByMonth(month, year);
 
-        System.out.println("\n===== Income & Expenses for " + month + "/" + year + " =====\n");
+        System.out.println("\n===== Income & Expenses for " + month + "/" + year + " =====");
+        System.out.println("Income:");
         double totalExpenses = 0;
         for (Expense expense : expenses) {
             totalExpenses += expense.getAmount();
             System.out.println(expense.toString());
         }
         System.out.println("Total Expenses: €" + totalExpenses+ "\n");
+        System.out.println("Expenses:");
         double totalIncomes = 0;
         for (Income income : incomes) {
             totalIncomes += income.getAmount();
